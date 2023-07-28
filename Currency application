@@ -1,0 +1,45 @@
+package com.techlabs.tasks;
+import java.util.Scanner;
+public class counting {
+	public static void main(String[] args)
+	{
+		System.out.println("hello welcome to the Currency application");
+		System.out.println("enter amount you want");
+		Scanner sc=new Scanner(System.in);
+		int number=sc.nextInt();
+		if(number>=50000)
+			{
+					System.out.println("exceed the amount out of the range of 50000");
+					return;
+			}
+		else
+		{
+			if(number%100!=0)
+			{
+				System.out.println("its not a multiples of hunderd(100)");
+				return;
+			}
+			else
+			{
+				int twothousand,fivehundred,twohundred,hundred,val,value,valuet,valuef;
+				val=number/2000;
+				System.out.println("twothousand notes:"+val);
+				fivehundred=number-(val*2000);
+				value=fivehundred/500;
+				System.out.println("fivehundred notes:"+value);
+				twohundred=(number-(val*2000+value*500));
+				valuet=twohundred/200;
+				System.out.println("two hundred notes:"+valuet);
+				valuef=number-(val*2000+value*500+valuet*200);
+				hundred=valuef/100;
+				System.out.println("hundredsare:"+hundred);
+			}
+			
+			
+		}
+		
+
+	
+	}
+
+}
